@@ -22,10 +22,11 @@ Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
 
 /*
 Cosa devo fare?
--Creare un array di oggetti.
+-Creare un array
+-Inserisco 10 oggetti
 -Ogni oggetto deve avere 2 chiavi: nome e peso.
 -Creo una variabile d'appoggio.
--Seleziono la CHIAVE peso di ogni bici
+-Seleziono la CHIAVE peso di ciascun oggetto 
     -SE il VALORE della chiave peso è più basso degli altri valori delle chavi
         -pusho in una variabile d'appoggio
     -ALTRIMENTI
@@ -34,4 +35,66 @@ Cosa devo fare?
 -Stampo la variabile d'appoggio.
 
 */
+
+//Creare un array
+const bikes =
+
+    [ //Inserisco 10 oggetti
+
+        { //Ogni oggetto deve avere 2 chiavi: name e peso.
+            name: 'Bici da città',
+            weight: 10,
+        },
+        
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Mountain bike',
+            weight: 15,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici da corsa',
+            weight: 3,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici da cicloturismo',
+            weight: 6,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici ibrida',
+            weight: 8,
+        },
+        
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici a scatto fisso',
+            weight: 12,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici pieghevole',
+            weight: 9,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici da ciclocross',
+            weight: 5,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici elettrica',
+            weight: 20,
+        },
+
+        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+            name: 'Bici per bambini',
+            weight: 7,
+        },
+
+
+    ]
+
+console.log('Array di oggetti;');
+console.log(bikes);
+
 
