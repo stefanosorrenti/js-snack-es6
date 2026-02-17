@@ -37,7 +37,7 @@ Cosa devo fare?
 
 //DATA
 const mainEl = document.querySelector('main') //Seleziono il nodo che corrisponde a 'main' nel documento
-console.log(mainEl);
+//console.log(mainEl);
 
 const bikes = //Creare un array
 
@@ -96,8 +96,8 @@ const bikes = //Creare un array
 
     ]
 
-console.log('Array di oggetti;');
-console.log(bikes);
+//console.log('Array di oggetti;');
+//console.log(bikes);
 
 
 
@@ -110,14 +110,13 @@ let bikesWeight = 0; //Creo una variabile d'appoggio.
 //Ciclo dentro il nostro oggetto
 for (let i = 0; i < bikes.length; i++) {
 
-    console.log('Sono nel ciclo for')
+    //console.log('Sono nel ciclo for')
     bikesWeight = bikes[2]; //Seleziono l'oggetto con il valore  weight minore.
 
 }
 
 console.log(bikesWeight); //Stampo e loggo la variabile d'appoggio.
-console.log(bikesWeight.weight); //Stampo il peso della bici
-
+//console.log(bikesWeight.weight); 
 
 
 //Stampo a schermo la variabile d'appoggio. (che contine il nostro oggetto)
