@@ -23,19 +23,19 @@ Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
 /*
 Cosa devo fare?
 -Creare un array
--Inserisco 10 oggetti
+-Inserisco degli oggetti
 -Ogni oggetto deve avere 2 chiavi: nome e peso.
 -Creo una variabile d'appoggio.
+-Ciclo dentro il nostro array di oggetti
 -Seleziono la CHIAVE peso di ciascun oggetto 
-    -SE il VALORE della chiave peso è più basso degli altri valori delle chavi
-        -pusho in una variabile d'appoggio
-    -ALTRIMENTI
-        -Non pusho.
-
+-seleziono e pusho quella con il peso minore
 -Stampo la variabile d'appoggio.
+-stampo a schermo la variabile d'appoggio.
 
 */
 
+
+//DATA
 //Creare un array
 const bikes =
 
@@ -98,3 +98,24 @@ console.log('Array di oggetti;');
 console.log(bikes);
 
 
+
+//LOGIC
+
+
+let bikesWeight = [] //Creo una variabile d'appoggio.
+
+
+//Ciclo dentro il nostro oggetto
+for (let i = 0; i < bikes.length; i++) {
+
+    const bike = bikes[i]; //Seleziono la CHIAVE peso di ciascun oggetto 
+
+    console.log('Sono nel ciclo for')
+    //SE il VALORE della chiave peso è più basso degli altri valori delle stessa chiave
+    if(bike.weight < bike.weight) {
+        bikesWeight.push(bike)
+    }
+    
+}
+
+console.log(bikesWeight);
