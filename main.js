@@ -18,3 +18,20 @@ Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
 //SNACK 1
 
 
+//HUMAN CODE
+
+/*
+Cosa devo fare?
+-Creare un array di oggetti.
+-Ogni oggetto deve avere 2 chiavi: nome e peso.
+-Creo una variabile d'appoggio.
+-Seleziono la CHIAVE peso di ogni bici
+    -SE il VALORE della chiave peso è più basso degli altri valori delle chavi
+        -pusho in una variabile d'appoggio
+    -ALTRIMENTI
+        -Non pusho.
+
+-Stampo la variabile d'appoggio.
+
+*/
+
