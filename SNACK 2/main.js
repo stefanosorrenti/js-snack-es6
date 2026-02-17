@@ -20,12 +20,17 @@ Cosa devo fare?
 -Le il valore di punti fatti e falli subiti deve essere un numero generato casualmente
 -Creo una variabile d'appoggio.
 -Ciclo nell'array
--Seleziono solo le proprieta nomi e falli subiti
--Loggo tutto in console.
+-Seleziono le proprieta nomi,  falli subiti e punti
+    -SE falli subiti OR punti subiti sono uguali a 0
+        -assegno un numero random ad entrambi
+        -pusho nella variabile d'appoggio falli subiti e nomi
+    
+-Loggo la varibile d'appoggio.
 */
 
 //DATA
-
+const randomNumb = getRandomNumb(1, 10) //Generatore casuale di numeri
+console.log(`Numero casuale ${randomNumb}`);
 const soccerTeams = //Creare un array
 
 [   //Aggiungere degli oggetti (nel nostro caso 5 squadre di calcio)
@@ -51,8 +56,44 @@ const soccerTeams = //Creare un array
 
     }
 ]
+console.log('Squadre/Oggetti');
 
 console.log(soccerTeams);
+
+
+
+
+
+//LOGIC
+
+let teamStats = [] //Creo una variabile d'appoggio.
+
+for (let i = 0; i < soccerTeams.length; i++) { //Ciclo nell'array soccerTeams
+    const team = soccerTeams[i]; //Seleziono ogni singolo elemento nel nostro array (nel nostro caso sto selezioando oggetti) e lo salvo in una variabile
+    console.log('sono nel ciclo for');
+    //console.log(team.errors);
+    //console.log(team.name);
+    //console.log(team.score);
+    
+    //SE falli subiti OR punti subiti sono uguali a 0
+    if(team.score || team.errors === 0) {
+        team.score = randomNumb //assegno un numero random  
+        team.errors = randomNumb ////assegno un numero random  
+        
+        teamStats.push(team.errors, team.name) //pusho nella variabile d'appoggio falli subiti e nomi delle squadre
+        
+    }    
+}
+
+console.log(teamStats);
+
+
+//Loggo la varibile d'appoggio interpolando l'arrai con il rispettivo indice che corrisponde alla proprieta selezionata prima dagli oggetti.
+console.log(` 
+    La squadra ${teamStats[1]} ha subito ${teamStats[0]} falli.
+    La squadra ${teamStats[3]} ha subito ${teamStats[2]} falli.
+    La squadra ${teamStats[5]} ha subito ${teamStats[4]} falli.`);
+
 
 
 
@@ -62,11 +103,13 @@ console.log(soccerTeams);
 //FUNCTIONS
 
 function getRandomNumb(min, max) {
-    
+
      return Math.floor(Math.random() * max) + min;
 }
 
-const randomNumb = getRandomNumb(1, 10)
 
 
-console.log(randomNumb);
+for (let i = 0; i < soccerTeams.length; i++) { //-Ciclo nell'soccerTeams
+    const team = soccerTeams[i];
+    
+}
