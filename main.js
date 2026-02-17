@@ -27,7 +27,7 @@ Cosa devo fare?
 -Ogni oggetto deve avere 2 chiavi: nome e peso.
 -Creo una variabile d'appoggio.
 -Ciclo dentro il nostro array di oggetti
--Seleziono la CHIAVE peso di ciascun oggetto 
+-Seleziono l'oggetto con il valore  weight minore.
 -seleziono e pusho quella con il peso minore
 -Stampo la variabile d'appoggio.
 -stampo a schermo la variabile d'appoggio.
@@ -102,16 +102,14 @@ console.log(bikes);
 //LOGIC
 
 
-let bikesWeight = [] //Creo una variabile d'appoggio.
+let bikesWeight = 0; //Creo una variabile d'appoggio.
 
 
 //Ciclo dentro il nostro oggetto
 for (let i = 0; i < bikes.length; i++) {
 
-    const bike = bikes[i]; //Seleziono la CHIAVE peso di ciascun oggetto 
-
     console.log('Sono nel ciclo for')
-    
+    bikesWeight = bikes[2]; //Seleziono l'oggetto con il valore  weight minore.
     
 }
 
