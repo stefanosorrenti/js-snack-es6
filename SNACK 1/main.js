@@ -19,7 +19,10 @@ Cosa devo fare?
 -Ogni oggetto deve avere 2 chiavi: nome e peso.
 -Creo una variabile d'appoggio.
 -Ciclo dentro il nostro array di oggetti
--Seleziono l'oggetto con il valore  weight minore.
+-Confonrto il valore della chiave peso con quella dell'oggetto successivo
+-Salvo la più piccola
+-ripeto il ciclo
+-Alla fine seleziono l'oggetto con il valore  weight minore.
 -seleziono e pusho quella con il peso minore
 -Stampo e loggo la variabile d'appoggio.
 -stampo a schermo la variabile d'appoggio.
@@ -45,14 +48,14 @@ const bikes = //Creare un array
             weight: 15,
         },
 
-        { //Ogni oggetto deve avere 2 chiavi: name e weight.
+       { //Ogni oggetto deve avere 2 chiavi: name e weight.
             name: 'Bici da corsa Alan',
             weight: 3,
         },
-
+ 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
             name: 'Bici da corsa Bixxis',
-            weight: 6,
+            weight: 0.5,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
@@ -83,41 +86,45 @@ const bikes = //Creare un array
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
             name: 'Bici da corsa Time',
             weight: 7,
-        },
+        }
 
-
+ 
     ]
 
-//console.log('Array di oggetti;');
-//console.log(bikes);
 
 
 
+    let minorWei = 999; //ipotizzo non supera questo valore
+    let name = ''
 //LOGIC
-
-
-let bikesWeight = 0; //Creo una variabile d'appoggio.
-
-
-//Ciclo dentro il nostro oggetto
 for (let i = 0; i < bikes.length; i++) {
+    console.log(bikes[i]);
+    console.log(i);
+    const bikeWeight = bikes[i].weight;
 
-    //console.log('Sono nel ciclo for')
-    bikesWeight = bikes[2]; //Seleziono l'oggetto con il valore  weight minore.
+    console.log(bikeWeight);
+    if(bikeWeight < minorWei) {
+        minorWei = bikeWeight
+        name = bikes[i].name
 
+    } 
+     console.log('minorWei', minorWei);
+     
 }
 
-console.log(bikesWeight); //Stampo e loggo la variabile d'appoggio.
-//console.log(bikesWeight.weight); 
+
+
+
+
 
 
 //Stampo a schermo la variabile d'appoggio. (che contine il nostro oggetto)
 //Seleziono l'elemento e ci aggiungo la proprieta inner.HTML, 
 // in cui ci aggiungo del markup interpolando i valori delle chiavi dell'oggetto seleziona nella variabile d'appoggio.
-mainEl.innerHTML = ` 
+ mainEl.innerHTML = ` 
 
-<h2>La bici più leggera è la: ${bikesWeight.name}</h2>
-        <p>La bici pesa solo: ${bikesWeight.weight} kg.</p>
+<h2>La bici più leggera è la: ${name}</h2>
+        <p>La bici pesa solo: ${minorWei} kg.</p>
 
 
 
