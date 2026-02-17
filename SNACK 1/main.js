@@ -95,7 +95,8 @@ const bikes = //Creare un array
 
 
     let minorWei = 999; //ipotizzo non supera questo valore
-    let name = ''
+    let name = '' //variabile stringa vuota d'appoggio vuota
+
 //LOGIC
 for (let i = 0; i < bikes.length; i++) {
     console.log(bikes[i]);
