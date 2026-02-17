@@ -42,52 +42,52 @@ const bikes =
     [ //Inserisco 10 oggetti
 
         { //Ogni oggetto deve avere 2 chiavi: name e peso.
-            name: 'Bici da città',
+            name: 'Bici da corsa 3T',
             weight: 10,
         },
         
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Mountain bike',
+            name: 'Bici da corsa Argon 18',
             weight: 15,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici da corsa',
+            name: 'Bici da corsa Alan',
             weight: 3,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici da cicloturismo',
+            name: 'Bici da corsa bixxis',
             weight: 6,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici ibrida',
+            name: 'Bici da crosa crisp',
             weight: 8,
         },
         
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici a scatto fisso',
+            name: 'Bici da corsa Decathlon',
             weight: 12,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici pieghevole',
+            name: 'Bici da corsa pasculli',
             weight: 9,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici da ciclocross',
+            name: 'Bici da corsa vitus',
             weight: 5,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici elettrica',
+            name: 'Bici da corsa trek',
             weight: 20,
         },
 
         { //Ogni oggetto deve avere 2 chiavi: name e weight.
-            name: 'Bici per bambini',
+            name: 'Bici da corsa time',
             weight: 7,
         },
 
@@ -111,10 +111,7 @@ for (let i = 0; i < bikes.length; i++) {
     const bike = bikes[i]; //Seleziono la CHIAVE peso di ciascun oggetto 
 
     console.log('Sono nel ciclo for')
-    //SE il VALORE della chiave peso è più basso degli altri valori delle stessa chiave
-    if(bike.weight < bike.weight) {
-        bikesWeight.push(bike)
-    }
+    
     
 }
 
