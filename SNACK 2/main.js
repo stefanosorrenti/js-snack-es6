@@ -23,3 +23,33 @@ Cosa devo fare?
 -Seleziono solo le proprieta nomi e falli subiti
 -Loggo tutto in console.
 */
+
+//DATA
+
+const soccerTeams = //Creare un array
+
+[   //Aggiungere degli oggetti (nel nostro caso 5 squadre di calcio)
+
+    { //Ogni oggetto deve avere 3 proprieta:
+        name: 'Inter',
+        score: 0,
+        errors: 0,
+
+    },
+
+    { //Ogni oggetto deve avere 3 proprieta:
+        name: 'Milan',
+        score: 0,
+        errors: 0,
+
+    },
+
+    { //Ogni oggetto deve avere 3 proprieta:
+        name: 'Cerignola',
+        score: 0,
+        errors: 0,
+
+    }
+]
+
+console.log(soccerTeams);
