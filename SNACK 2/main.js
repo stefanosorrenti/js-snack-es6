@@ -33,29 +33,29 @@ const randomNumb = getRandomNumb(1, 10) //Generatore casuale di numeri
 console.log(`Numero casuale ${randomNumb}`);
 const soccerTeams = //Creare un array
 
-[   //Aggiungere degli oggetti (nel nostro caso 5 squadre di calcio)
+    [   //Aggiungere degli oggetti (nel nostro caso 5 squadre di calcio)
 
-    { //Ogni oggetto deve avere 3 proprieta:
-        name: 'Inter',
-        score: 0,
-        errors: 0,
+        { //Ogni oggetto deve avere 3 proprieta:
+            name: 'Inter',
+            score: 0,
+            errors: 0,
 
-    },
+        },
 
-    { //Ogni oggetto deve avere 3 proprieta:
-        name: 'Milan',
-        score: 0,
-        errors: 0,
+        { //Ogni oggetto deve avere 3 proprieta:
+            name: 'Milan',
+            score: 0,
+            errors: 0,
 
-    },
+        },
 
-    { //Ogni oggetto deve avere 3 proprieta:
-        name: 'Cerignola',
-        score: 0,
-        errors: 0,
+        { //Ogni oggetto deve avere 3 proprieta:
+            name: 'Cerignola',
+            score: 0,
+            errors: 0,
 
-    }
-]
+        }
+    ]
 console.log('Squadre/Oggetti');
 
 console.log(soccerTeams);
@@ -74,42 +74,46 @@ for (let i = 0; i < soccerTeams.length; i++) { //Ciclo nell'array soccerTeams
     //console.log(team.errors);
     //console.log(team.name);
     //console.log(team.score);
-    
+
     //SE falli subiti OR punti subiti sono uguali a 0
-    if(team.score || team.errors === 0) {
+    if (team.score || team.errors === 0) {
         team.score = randomNumb //assegno un numero random  
         team.errors = randomNumb ////assegno un numero random  
+        //console.log(team.score);
+        //console.log(team.errors);
+
+        teamStats.push({team})
         
-        teamStats.push(team.errors, team.name) //pusho nella variabile d'appoggio falli subiti e nomi delle squadre
         
-    }    
+        /* teamStats.push() //pusho nella variabile d'appoggio falli subiti e nomi delle squadre */
+
+    }
 }
+
+
 
 console.log(teamStats);
 
 
 //Loggo la varibile d'appoggio interpolando l'arrai con il rispettivo indice che corrisponde alla proprieta selezionata prima dagli oggetti.
 console.log(` 
-    La squadra ${teamStats[1]} ha subito ${teamStats[0]} falli.
-    La squadra ${teamStats[3]} ha subito ${teamStats[2]} falli.
-    La squadra ${teamStats[5]} ha subito ${teamStats[4]} falli.`);
+    La squadra ${teamStats[0].team.name} ha subito ${teamStats[0].team.errors} falli.
+    La squadra ${teamStats[1].team.name} ha subito ${teamStats[1].team.errors} falli.
+    La squadra ${teamStats[2].team.name} ha subito ${teamStats[2].team.errors} falli.`);
 
 
 
 
+//console.log(teamStats[0]);
 
 
 
 //FUNCTIONS
 
 function getRandomNumb(min, max) {
-
-     return Math.floor(Math.random() * max) + min;
-}
-
-
-
-for (let i = 0; i < soccerTeams.length; i++) { //-Ciclo nell'soccerTeams
-    const team = soccerTeams[i];
     
+    return Math.floor(Math.random() * max) + min;
 }
+
+
+
