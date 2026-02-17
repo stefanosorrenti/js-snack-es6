@@ -53,3 +53,20 @@ const soccerTeams = //Creare un array
 ]
 
 console.log(soccerTeams);
+
+
+
+
+
+
+//FUNCTIONS
+
+function getRandomNumb(min, max) {
+    
+     return Math.floor(Math.random() * max) + min;
+}
+
+const randomNumb = getRandomNumb(1, 10)
+
+
+console.log(randomNumb);
