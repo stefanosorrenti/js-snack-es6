@@ -80,11 +80,14 @@ for (let i = 0; i < soccerTeams.length; i++) { //Ciclo nell'array soccerTeams
     if (team.score || team.errors === 0) {
         /* const randomNumb = getRandomNumb(1, 10) */
         team.score = getRandomNumb(1, 10) //assegno un numero random  
-        team.errors = getRandomNumb(1, 10) //assegno un numero random  
+        team.errors = getRandomNumb(1, 5) //assegno un numero random  
         //console.log(team.score);
         //console.log(team.errors);
 
-         teamStats.push({name: team.name, errors: team.errors, score: team.score})
+         teamStats.push({ //pusho nella variabile d'appoggio creando un nuovo oggetto.
+            name: team.name, 
+            errors: team.errors, 
+            score: team.score})
         
         
         /* teamStats.push() //pusho nella variabile d'appoggio falli subiti e nomi delle squadre */
